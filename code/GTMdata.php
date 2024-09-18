@@ -1,8 +1,9 @@
 <?php
+namespace CyberDuck\GTM;
 /**
  * GTMdata
  *
- * This class creates a persistent container for all dataLayer values and is 
+ * This class creates a persistent container for all dataLayer values and is
  * used by the GTM class to store and retrieve data.
  *
  * @package silverstripe-google-tag-manager
@@ -332,11 +333,11 @@ class GTMdata
     private function __clone(){}
 
     /**
-     * Private wakeup
+     * public wakeup
      *
      * @since version 1.0.0
      *
      * @return void
      **/
-    private function __wakeup(){}
+    public function __wakeup(){}
 }

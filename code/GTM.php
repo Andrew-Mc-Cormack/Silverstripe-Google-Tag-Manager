@@ -1,15 +1,17 @@
 <?php
+
+namespace CyberDuck\GTM;
 /**
  * GTM
  *
- * A module to allow the easy implementation of Google Tag Manager within the 
- * Silverstripe framework. The GTM module is meant to cater for any features of 
- * Google Tag Manager that must be "hard coded" with a page. Data layer variables 
- * and ecommerce features such as purchases can be easily be inserted within a page 
+ * A module to allow the easy implementation of Google Tag Manager within the
+ * Silverstripe framework. The GTM module is meant to cater for any features of
+ * Google Tag Manager that must be "hard coded" with a page. Data layer variables
+ * and ecommerce features such as purchases can be easily be inserted within a page
  * through your controller functionality without having to edit your ss templates.
- * Instead of building the datalayer JavScript straight away, all data layer values 
+ * Instead of building the datalayer JavScript straight away, all data layer values
  * are stored in static arrays which are converted into JavScript once we call our
- * Tag Manager snippet. 
+ * Tag Manager snippet.
  *
  * @package silverstripe-google-tag-manager
  * @license MIT License https://github.com/cyber-duck/silverstripe-google-tag-manager/blob/master/LICENSE
@@ -18,7 +20,7 @@
 class GTM
 {
     /**
-     * Returns the complete data layer and Google Tag Manager snippet. Inject in 
+     * Returns the complete data layer and Google Tag Manager snippet. Inject in
      * the container ID (GTM-XXXXX). Only the XXXXX part is required for injection.
      * Creating the data layer and snippet this way stops any issues with data layer
      * values being populated after the snippet is called.
@@ -32,7 +34,7 @@ class GTM
     public static function snippet($id)
     {
         return Controller::curr()->customise([
-            'ID'   => $id, 
+            'ID'   => $id,
             'Data' => GTMdata::getDataLayer()
         ])->renderWith('TagManager');
     }
