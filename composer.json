@@ -19,9 +19,6 @@
     "support": {
         "issues": "http://github.com/cyber-duck/silverstripe-google-tag-manager/issues"
     },
-    "extra": {
-        "installer-name": "gtm"
-    },
     "require": {
         "php": ">=8.1.0",
         "composer/installers": "*",
