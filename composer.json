@@ -34,7 +34,6 @@
     },
     "require": {
         "php": ">=8.1.0",
-        "composer/installers": "*",
         "silverstripe/framework": "^4.0"
     },
     "minimum-stability": "dev",
