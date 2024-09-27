@@ -34,7 +34,7 @@
     },
     "require": {
         "php": ">=8.1.0",
-        "silverstripe/framework": "^4.0"
+        "silverstripe/framework": "^5.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
